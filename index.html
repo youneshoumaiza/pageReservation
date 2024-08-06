@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Réservation</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="dateDebut">Date d'arrivée:</label>
+                <input type="date" id="dateDebut" name="dateDebut" required>
+            </div>
+            <div class="form-group">
+                <label for="dateFin">Date de départ:</label>
+                <input type="date" id="dateFin" name="dateFin" required>
+            </div>
+            <div class="form-group">
+                <label for="adults">Adultes:</label>
+                <button type="button" class="decrement" data-target="adults">-</button>
+                <span id="adults">1</span>
+                <button type="button" class="increment" data-target="adults">+</button>
+            </div>
+            <div class="form-group">
+                <label for="children">Enfants:</label>
+                <button type="button" class="decrement" data-target="children">-</button>
+                <span id="children">0</span>
+                <button type="button" class="increment" data-target="children">+</button>
+                <div id="childrenAges"></div>
+            </div>
+            <button type="submit">Rechercher</button>
+        </form>
+        <div id="roomOptionsContainer"></div>
+        <div id="reservationSummary">
+            <h2>Votre réservation</h2>
+            <p>Date d'arrivée: <span id="arrivalDate"></span></p>
+            <p>Date de départ: <span id="departureDate"></span></p>
+            <p>Total: <span id="totalPrice"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
